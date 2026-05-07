@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url('/images/cute.jpg');
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(3px);
+    transform: scale(1.1);
+
+    z-index: -2;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.45);
+
+    z-index: -1;
+}
+
+.hero div{
+    z-index: 2;
+    animation: fadeUp 2s ease;
+}
+
+.hero p{
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1{
+    font-size: 5rem;
+    margin-bottom: 30px;
+
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+.hero button{
+    padding: 15px 35px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    transition: 0.4s ease;
+}
+
+.hero button:hover{
+    transform: scale(1.05);
+
+    background: rgba(255,255,255,0.2);
+
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
