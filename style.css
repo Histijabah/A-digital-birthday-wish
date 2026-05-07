@@ -22,7 +22,7 @@
     position: absolute;
     inset: 0;
 
-    background-image: url('/images/cute.jpg');
+    background-image: url('images/cute.jpg');
     background-size: cover;
     background-position: center;
 
